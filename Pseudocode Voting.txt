@@ -1,0 +1,65 @@
+Mulai
+
+Deklarasi:
+    MAX ← 10
+    kandidat[MAX] : string
+    suara[MAX] : integer
+    jumlah ← 0
+    pilihan ← 0
+
+Inisialisasi:
+    Untuk i ← 0 sampai MAX-1
+        suara[i] ← 0
+    Selesai
+
+Ulangi
+    Tampilkan "=== SISTEM VOTING MOBIL FAVORIT ==="
+    Tampilkan:
+        1. Tambah Mobil Favorit
+        2. Tampilkan Mobil
+        3. Voting
+        4. Tampilkan Hasil Voting
+        5. Tampilkan Pemenang
+        6. Keluar
+    Input pilihan
+
+    Jika pilihan = 1 maka
+        Input n
+        Untuk i ← 1 sampai n
+            Input kandidat[jumlah]
+            suara[jumlah] ← 0
+            jumlah ← jumlah + 1
+        Selesai
+
+    Jika pilihan = 2 maka
+        Untuk i ← 0 sampai jumlah-1
+            Tampilkan kandidat[i]
+        Selesai
+
+    Jika pilihan = 3 maka
+        Input pilih
+        Jika pilih >= 1 dan pilih <= jumlah maka
+            suara[pilih-1] ← suara[pilih-1] + 1
+            Tampilkan "Voting berhasil"
+        Jika tidak
+            Tampilkan "Pilihan tidak valid"
+
+    Jika pilihan = 4 maka
+        Untuk i ← 0 sampai jumlah-1
+            Tampilkan kandidat[i], suara[i]
+        Selesai
+
+    Jika pilihan = 5 maka
+        max ← suara[0]
+        pemenang ← 0
+        Untuk i ← 1 sampai jumlah-1
+            Jika suara[i] > max maka
+                max ← suara[i]
+                pemenang ← i
+        Selesai
+        Tampilkan "Mobil Favorit Terpilih: ", kandidat[pemenang]
+
+Sampai pilihan = 6
+
+Tampilkan "Terima kasih"
+Selesai
